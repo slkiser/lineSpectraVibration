@@ -1,0 +1,8 @@
+data/ultrasonic_synthetic_signal_105.mat filter=lfs diff=lfs merge=lfs -text
+data/128.pth filter=lfs diff=lfs merge=lfs -text
+data/2048.pth filter=lfs diff=lfs merge=lfs -text
+data/256.pth filter=lfs diff=lfs merge=lfs -text
+data/4096.pth filter=lfs diff=lfs merge=lfs -text
+data/512.pth filter=lfs diff=lfs merge=lfs -text
+data/64.pth filter=lfs diff=lfs merge=lfs -text
+data/1024.pth filter=lfs diff=lfs merge=lfs -text
