@@ -11,7 +11,6 @@ from pytictoc import TicToc
 import numpy as np
 import matplotlib.pyplot as plt
 from utilities import awgn, ls, detectpeaksort, freqsort, load
-from metrics import MFD, MAD, MSFE, MSAE, FSR, CRB
 
 from uni_esprit import uni_esprit
 from relax import relax
@@ -31,7 +30,7 @@ import torch
 from pathlib import Path
 weights = str(N)
 weights_file = weights + '.pth'
-fr_path = Path('data') / weights_file
+fr_path = Path('weights') / weights_file
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 fr_module, _, _, _, _ = load(fr_path, 'fr', device)
 fr_module = fr_module.double()
@@ -83,7 +82,7 @@ t.tic()
 omega_1 = uni_esprit(y, K)
 amp_1 = ls(y,omega_1)
 omega_1, amp_1 = freqsort(omega_1, amp_1)
-  
+
 t_1 = t.tocvalue()
 
 # RELAX
