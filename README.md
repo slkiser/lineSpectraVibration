@@ -46,11 +46,15 @@ snr = 30
 d = 2/N
 ```
 
-The script utilizes a timer class `TicToc()` which behaves very similarly to MATLAB's `tic` `toc`. For all 6 algorithms, results of time taken, and frequency and their respective amplitude estimates are given. At the end, a plot is created comparing the discrete Fourier Transform (via FFT), Unitary ESPRIT, and DeepFreq frequency and amplitude estimates. The vertical black dotted lines correspond to the true normalized wrapped frequencies and the horizontal line corresponds to the correct amplitude.
+The script utilizes a timer class `TicToc()` which behaves very similarly to MATLAB's `tic` `toc`. For all 6 algorithms, results of time taken, and frequency and their respective amplitude estimates are given. 
+
+At the end, a plot is created comparing the discrete Fourier Transform (via FFT), Unitary ESPRIT, and DeepFreq frequency and amplitude estimates. 
+
+The vertical black dotted lines correspond to the true normalized wrapped frequencies and the horizontal line corresponds to the correct amplitude.
 
 ![Image of plot](https://github.com/slkiser/lineSpectraVibration/blob/main/plot.png)
 
-The `example.py` script should be understood as a reference for Syntax, function calls, and the object-oriented organization hierarchy.
+The `example.py` script should be understood as a reference for syntax (especially for PyTorch), function calls, and the object-oriented organization.
 
 ___
 
