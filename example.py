@@ -1,14 +1,7 @@
-#%% Clear console and variables
-try:
-    from IPython import get_ipython
-    get_ipython().magic('clear')
-    get_ipython().magic('reset -f')
-except:
-    pass
-
-#%% Code
+#%% Imports
 from pytictoc import TicToc
 import numpy as np
+pi = np.pi
 import matplotlib.pyplot as plt
 from utilities import awgn, ls, detectpeaksort, freqsort, load
 
@@ -20,17 +13,15 @@ from nomp.nomp import nomp
 # Define signal parameters
 N = 2**7
 K = 5
-snr = 40
-distance_min = 2/N
-pi = np.pi
+snr = 30
 d = 2/N
 
-# DeepFreq auxiliary
+# DeepFreq auxiliary setup
 import torch
 from pathlib import Path
 weights = str(N)
 weights_file = weights + '.pth'
-fr_path = Path('weights') / weights_file
+fr_path = Path('data') / weights_file
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 fr_module, _, _, _, _ = load(fr_path, 'fr', device)
 fr_module = fr_module.double()
@@ -39,7 +30,11 @@ fr_module.eval()
 xgrid = np.linspace(0, 2*np.pi, fr_module.fr_size, endpoint=False).reshape(fr_module.fr_size, 1)
 
 # Generate signal with frequencies
-normalized_omega_wrap = np.array([0.1, 0.14, 0.3, 0.4, 0.6]).reshape(K,1)
+while True:
+    normalized_omega_wrap = np.sort(np.random.rand(K, 1), axis=None)
+    if np.all(np.diff(normalized_omega_wrap) > d) and (normalized_omega_wrap[0]-normalized_omega_wrap[-1]+1) > d:
+        break
+
 normalized_omega = np.copy(normalized_omega_wrap)
 normalized_omega[normalized_omega >
                   0.5] = normalized_omega[normalized_omega > 0.5] - 1
@@ -71,10 +66,6 @@ f = np.linspace(0, 2*pi, N, endpoint=False).reshape(N, 1)
 omega_0, amp_0 = detectpeaksort(f,Y,K)
 
 t_0 = t.tocvalue()
-
-# plt.plot(f, Y)
-# plt.plot(omega_0,amp_0,'o')
-# plt.grid()
 
 # Unitary ESPRIT
 t.tic()
@@ -123,6 +114,15 @@ omega_5, amp_5 = detectpeaksort(xgrid,freqrep,K)
 
 t_5 = t.tocvalue()
 
-# plt.plot(xgrid, freqrep.squeeze())
-# plt.plot(omega_5,amp_5,'o')
-# plt.grid()
+# Plot
+plt.plot(f, Y,color='tab:blue')
+plt.plot(xgrid, freqrep.squeeze(),color='tab:green')
+for xc in omega_wrap:
+    plt.axvline(x=xc, color='k', linestyle='--')
+plt.axhline(1, color='k', linestyle='--')
+plt.plot(omega_0,amp_0,'o',label='DFT (FFT)',color='tab:blue')
+plt.plot(omega_1,amp_1,'v',label='U-ESPRIT',color='tab:orange')
+plt.plot(omega_5,amp_5,'s',label='DeepFreq',color='tab:green')
+leg = plt.legend();
+plt.xlabel('Wrapped normalized frequency [0, 2pi]')
+plt.ylabel('Amplitude')
