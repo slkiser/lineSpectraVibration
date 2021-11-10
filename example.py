@@ -121,7 +121,7 @@ for xc in omega_wrap:
     plt.axvline(x=xc, color='k', linestyle='--')
 plt.axhline(1, color='k', linestyle='--')
 plt.plot(omega_0,amp_0,'o',label='DFT (FFT)',color='tab:blue')
-plt.plot(omega_1,amp_1,'v',label='U-ESPRIT',color='tab:orange')
+plt.plot(omega_1,amp_1,'P',label='U-ESPRIT',color='tab:orange')
 plt.plot(omega_5,amp_5,'s',label='DeepFreq',color='tab:green')
 leg = plt.legend();
 plt.xlabel('Wrapped normalized frequency [0, 2pi]')
