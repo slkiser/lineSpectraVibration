@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 *Make sure to make the main folder the console's working directory.*
 
-`example.py` is a script that generates a random number of **stationary** cissoids `K=5` with a normalized frequency distance of `d=2/N`  as a discrete signal length `N=128` with an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
+`example.py` is a script that generates a random number of **stationary** cissoids `K = 5` with a normalized frequency distance of `d = 2/N`  as a discrete signal length `N = 128` with an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
 
 ```
 N = 2**7
