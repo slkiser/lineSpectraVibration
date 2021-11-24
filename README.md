@@ -62,7 +62,7 @@ ___
 
 This research was part of a PhD thesis funded by [Arts et Métiers](https://artsetmetiers.fr/) (École nationale supérieure d'arts et métiers). Laboratory equipment was provided by H2020 FastMat (fast determination of fatigue properties of materials beyond one billion cycles) project under the European Research Council (ERC) (grant agreement No 725142) at [PIMM laboratory](https://pimm.artsetmetiers.fr/).
 
-![Image of logos](https://github.com/slkiser/lineSpectraVibration/blob/main/logos.png)
+![Image of logos](https://github.com/slkiser/lineSpectraVibration/blob/main/logo.png)
 
 ## License
 
