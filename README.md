@@ -17,7 +17,7 @@ Two zip files are provided due to size constraints:
 Filename (download) | Size | Description
 --- | --- | ---
 [lineSpectraVibration-Full-v1.0.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.0.0/lineSpectraVibration-Full-v1.0.0.zip) | 679.50 MB | Includes the source code and all DeepFreq weight files for all signal lengths tested in the submitted manuscript.
-[lineSpectraVibration-Full-v1.0.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.0.0/lineSpectraVibration-Lite-v1.0.0.zip) | 23.80 MB | Includes the source code and only the DeepFreq weight file corresponding to signal length (N = 128).
+[lineSpectraVibration-Lite-v1.0.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.0.0/lineSpectraVibration-Lite-v1.0.0.zip) | 23.80 MB | Includes the source code and only the DeepFreq weight file corresponding to a signal length (N = 128).
 
 
 
@@ -61,6 +61,8 @@ ___
 ## Acknowledgments
 
 This research was part of a PhD thesis funded by [Arts et Métiers](https://artsetmetiers.fr/) (École nationale supérieure d'arts et métiers). Laboratory equipment was provided by H2020 FastMat (fast determination of fatigue properties of materials beyond one billion cycles) project under the European Research Council (ERC) (grant agreement No 725142) at [PIMM laboratory](https://pimm.artsetmetiers.fr/).
+
+![Image of logos](https://github.com/slkiser/lineSpectraVibration/blob/main/logos.png)
 
 ## License
 

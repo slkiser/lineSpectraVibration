@@ -1,3 +1,50 @@
+"""
+%=============================================================================
+% DESCRIPTION:
+% This is the Python implementation of the frequency esimation module from 
+% DeepFreq, for line spectral estimation (LSE) problems. This was written for 
+% the submitted manuscript:
+%
+% "Real-time sinusoidal parameter estimation for damage growth monitoring 
+%  during ultrasonic very high cycle fatigue tests."
+%
+%=============================================================================
+% Version 1.1.0, Authored by:
+% Shawn L. KISER (Msc) @ https://www.linkedin.com/in/shawn-kiser/
+%   Laboratoire PIMM, Arts et Metiers Institute of Technology, CNRS, Cnam,
+%   HESAM Universite, 151 boulevard de l’Hopital, 75013 Paris (France)
+%
+% Based on:
+% [1] G. Izacard, S. Mohan, and C. Fernandez-Granda, “Data-driven Estimation 
+%     of Sinusoid Frequencies,” arXiv:1906.00823 [cs, eess, stat], Feb. 2021, 
+%     Available: http://arxiv.org/abs/1906.00823
+%
+%=============================================================================
+% The MIT License (MIT)
+% 
+% Copyright (c) 2021 Shawn L. KISER
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+
+%=============================================================================
+"""
+
 import torch.nn as nn
 
 def set_fr_module(args):

@@ -2,13 +2,13 @@
 %=============================================================================
 % DESCRIPTION:
 % This is the Python implementation of Unitary ESPRIT, for line spectral 
-% estimation (LSE) problems. This was written for the submitted article:
+% estimation (LSE) problems. This was written for the submitted manuscript:
 %
 % "Real-time sinusoidal parameter estimation for damage growth monitoring 
 %  during ultrasonic very high cycle fatigue tests."
 %
 %=============================================================================
-% Version 2.2, Authored by:
+% Version 1.1.0, Authored by:
 % Shawn L. KISER (Msc) @ https://www.linkedin.com/in/shawn-kiser/
 %   Laboratoire PIMM, Arts et Metiers Institute of Technology, CNRS, Cnam,
 %   HESAM Universite, 151 boulevard de l’Hopital, 75013 Paris (France)

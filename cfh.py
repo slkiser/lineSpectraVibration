@@ -3,13 +3,13 @@
 % DESCRIPTION:
 % This is the Python implementation of Coarse to fine HAQSE (CFH), for line 
 % spectral estimation (LSE) problems. This was written for the submitted 
-% article:
+% manuscript:
 %
 % "Real-time sinusoidal parameter estimation for damage growth monitoring 
 %  during ultrasonic very high cycle fatigue tests."
 %
 %=============================================================================
-% Version 2.2, Authored by:
+% Version 1.1.0, Authored by:
 % Shawn L. KISER (Msc) @ https://www.linkedin.com/in/shawn-kiser/
 %   Laboratoire PIMM, Arts et Metiers Institute of Technology, CNRS, Cnam,
 %   HESAM Universite, 151 boulevard de l’Hopital, 75013 Paris (France)
@@ -58,7 +58,7 @@ def cfh(y, P):
     cq = (1 - np.pi * q * 1/math.tan(np.pi * q)) / (q * math.cos(np.pi * q)**2)
     Q1opt = math.ceil(math.log(math.log2(N / math.log(N))) / math.log(3))
     Q2opt = math.ceil(math.log(N / math.log(N)) / math.log(2))
-    Qopt = max((2, Q1opt, Q2opt));
+    Qopt = max((2, Q1opt, Q2opt))
     p = np.zeros((P,1))
     delta = np.zeros((P,1))
     A = np.zeros((1,P),dtype=complex)

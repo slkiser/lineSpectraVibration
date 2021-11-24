@@ -2,13 +2,13 @@
 %=============================================================================
 % DESCRIPTION:
 % This is the Python implementation of RELAX, for line spectral 
-% estimation (LSE) problems. This was written for the submitted article:
+% estimation (LSE) problems. This was written for the submitted manuscript:
 %
 % "Real-time sinusoidal parameter estimation for damage growth monitoring 
 %  during ultrasonic very high cycle fatigue tests."
 %
 %=============================================================================
-% Version 2.2, Authored by:
+% Version 1.1.0, Authored by:
 % Shawn L. KISER (Msc) @ https://www.linkedin.com/in/shawn-kiser/
 %   Laboratoire PIMM, Arts et Metiers Institute of Technology, CNRS, Cnam,
 %   HESAM Universite, 151 boulevard de l’Hopital, 75013 Paris (France)
@@ -61,7 +61,7 @@ def relax(y, P):
     ypad = np.concatenate((y.reshape(N,1),np.zeros(((zpFactor-1)*len(y),1))),axis=0).squeeze()
     cost = np.fft.fftshift(np.power(np.abs(np.fft.fft(ypad)),2))
     idx = np.argmax(cost)
-    Theta[1,0] = (1/zeroPad * idx) - 0.5;
+    Theta[1,0] = (1/zeroPad * idx) - 0.5
     Theta[0,0] = 1/N * newcost(Theta[:,0],y,N)
     ThetaOld = np.copy(Theta)
     for i in range(2,P+1):
@@ -73,11 +73,11 @@ def relax(y, P):
                 cost = np.fft.fftshift(np.power(np.abs(np.fft.fft(xpad)),2))
                 idx = np.argmax(cost)
                 if (np.size(Theta,1)>=k):
-                    Theta[1,k-1] = ((1/zeroPad) * idx) - 0.5;
+                    Theta[1,k-1] = ((1/zeroPad) * idx) - 0.5
                     Theta[0,k-1] = 1/N * newcost(Theta[:,k-1],x_i,N)
                 else:
                     Theta = np.concatenate((Theta,np.zeros((2,1))),axis=1)
-                    Theta[1,k-1] = ((1/zeroPad) * idx) - 0.5;
+                    Theta[1,k-1] = ((1/zeroPad) * idx) - 0.5
                     Theta[0,k-1] = 1/N * newcost(Theta[:,k-1],x_i,N)
             if ((abs(Theta[1,:] - ThetaOld[1,:]) < tol).all()):
                 ThetaOld = np.concatenate((ThetaOld,np.zeros((2,1),dtype=complex)),axis=1)
