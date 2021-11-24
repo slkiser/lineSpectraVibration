@@ -5,7 +5,8 @@
 % Pursuit (NOMP), for line spectral estimation (LSE) problems. This was 
 % written for the submitted article:
 %
-% "Real-time sinusoidal parameter estimation for ultrasonic fatigue tests."
+% "Real-time sinusoidal parameter estimation for damage growth monitoring 
+%  during ultrasonic very high cycle fatigue tests."
 %
 %=============================================================================
 % Version 2.2, Authored by:
