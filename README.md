@@ -16,8 +16,8 @@ We recommend the usage of the [Anaconda distribution](https://www.anaconda.com/p
 Two zip files are provided due to size constraints:
 Filename (download) | Size | Description
 --- | --- | ---
-[lineSpectraVibration-Full-v1.0.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.0.0/lineSpectraVibration-Full-v1.0.0.zip) | 679.50 MB | Includes the source code and all DeepFreq weight files for all signal lengths tested in the submitted manuscript.
-[lineSpectraVibration-Lite-v1.0.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.0.0/lineSpectraVibration-Lite-v1.0.0.zip) | 23.80 MB | Includes the source code and only the DeepFreq weight file corresponding to a signal length (N = 128).
+[lineSpectraVibration-Full-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Full-v1.1.0.zip) | 678.11 MB | Includes the source code and all DeepFreq weight files for all signal lengths tested in the submitted manuscript.
+[lineSpectraVibration-Full-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Lite-v1.1.0.zip) | 23.80 MB | Includes the source code and only the DeepFreq weight file corresponding to a signal length (N = 128).
 
 
 
