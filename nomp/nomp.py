@@ -20,8 +20,8 @@
 %     Signal Process., vol. 64, no. 19, pp. 5066–5081, Oct. 2016, 
 %     doi: 10.1109/tsp.2016.2580523.
 % 
-% Modfications include transciption from MATLAB sourced material into Python
-% code, appropriate optimizations, and change of notations. Specfically, this 
+% Modifications include transcription from MATLAB sourced material into Python
+% code, appropriate optimizations, and change of notations. Specifically, this 
 % version of NOMP is written only for complete data, and does not zero-pad the
 % FFT operation(s). It also relies on a LS estimate defined by eq. (22) in  
 % "Real-time sinusoidal parameter estimation for ultrasonic fatigue tests."

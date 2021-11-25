@@ -19,7 +19,7 @@
 %     Multiple Sinusoidals,” IEEE Signal Process. Lett., vol. 27, pp. 386–390, 
 %     2020, doi: 10.1109/lsp.2020.2970837.
 %
-% Modfications include transciption from MATLAB sourced material into Python
+% Modifications include transcription from MATLAB sourced material into Python
 % code, appropriate optimizations, and change of notations.
 %
 %=============================================================================

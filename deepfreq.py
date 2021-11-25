@@ -1,7 +1,7 @@
 """
 %=============================================================================
 % DESCRIPTION:
-% This is the Python implementation of the frequency esimation module from 
+% This is the Python implementation of the frequency estimation module from 
 % DeepFreq, for line spectral estimation (LSE) problems. This was written for 
 % the submitted manuscript:
 %
