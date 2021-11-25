@@ -5,7 +5,10 @@ This implements the line spectral estimators written in Python used in the submi
 
 Abstract:
 > Ultrasonic fatigue tests (UFT) are used to study the fatigue life behavior of metallic components undergoing a very high number of cycles (typically 10^7-10^9 cycles) under relatively low mechanical loads. By soliciting fatigue specimens at 20 kHz, ultrasonic fatigue machines are indispensable for monitoring damage growth and fatigue failures in a reasonable amount of time. As fatigue damage accumulates in the specimen, the specimen's free-end exhibits a nonlinear dynamic response. The resulting quasi-stationary, harmonic signals have sinusoidal parameters (frequency and amplitude) which are slowly time-varying with respect to the excitation frequency. The discrete Fourier transform (DFT) is typically used to extract these evolving sinusoidal parameters from a window of finite data of the vibration signal. Alternative spectral estimation methods, specifically line spectra estimators (LSEs), exploit a priori information of the signal via their modeling basis and overcome limitations seen by the DFT. Many LSEs are known to have state-of-the-art results when benchmarked on purely stationary signals with unit amplitudes. However, their performances are unknown in the context of slowly time-varying signals typical of UFT, leading to a widespread use of the DFT. Thus, this paper benchmarks classical and modern LSEs against specific synthetic signals which arise in UFTs. Adequate algorithms are then recommended and made publicly available to process experimental data coming from ultrasonic fatigue tests depending on performance metrics and experimental restraints.
-  
+
+If you use this code, please cite this work:
+> [1] S. L. Kiser, Line spectral estimators for ultrasonic vibration. 2021. [Online]. Available: https://github.com/slkiser/lineSpectraVibration
+
 
 ## Setup and usage
 We recommend the usage of the [Anaconda distribution](https://www.anaconda.com/products/individual) and the included [Spyder IDE](https://www.spyder-ide.org/). Spyder is a unique Python IDE that offers a [MATLAB](https://www.mathworks.com/products/matlab.html)-like experience with an integrated variable viewer.
@@ -13,11 +16,11 @@ We recommend the usage of the [Anaconda distribution](https://www.anaconda.com/p
 
 
 ### Download
-Two zip files are provided due to size constraints:
+Two zip files are provided for download due to size constraints:
 Filename (download) | Size | Description
 --- | --- | ---
-[lineSpectraVibration-Full-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Full-v1.1.0.zip) | 678.11 MB | Includes the source code and all DeepFreq weight files for all signal lengths tested in the submitted manuscript.
-[lineSpectraVibration-Lite-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Lite-v1.1.0.zip) | 23.80 MB | Includes the source code and only the DeepFreq weight file corresponding to a signal length (N = 128).
+[lineSpectraVibration-Full-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Full-v1.1.0.zip) | 756.35 MB | Includes the source code and all DeepFreq weight files for all signal lengths tested in the submitted manuscript.
+[lineSpectraVibration-Lite-v1.1.0.zip](https://github.com/slkiser/lineSpectraVibration/releases/download/v1.1.0/lineSpectraVibration-Lite-v1.1.0.zip) | 26.44 MB | Includes the source code and only the DeepFreq weight file corresponding to a signal length (N = 128).
 
 
 
@@ -37,7 +40,7 @@ pip install -r requirements.txt
 
 *Make sure to make the main folder the console's working directory.*
 
-`example.py` is a script that generates a random number of **stationary** cissoids `K = 5` with a normalized frequency distance of `d = 2/N`  as a discrete signal length `N = 128` with an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
+[`example.py`](example.py) is a script that generates a random number of **stationary** cissoids `K = 5` with a normalized frequency distance of `d = 2/N`  as a discrete signal length `N = 128` with an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
 
 ```
 N = 2**7
@@ -54,7 +57,7 @@ The vertical black dotted lines correspond to the true normalized wrapped freque
 
 ![Image of plot](https://github.com/slkiser/lineSpectraVibration/blob/main/plot.png)
 
-The `example.py` script should be understood as a reference for syntax (especially for PyTorch), function calls, and the object-oriented organization.
+The [`example.py`](example.py) script should be understood as a reference for syntax (especially for PyTorch), function calls, and the object-oriented organization.
 
 ___
 
@@ -66,6 +69,6 @@ This research was part of a PhD thesis funded by [Arts et Métiers](https://arts
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
