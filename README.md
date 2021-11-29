@@ -3,7 +3,7 @@
 # Line spectral estimators for ultrasonic vibration
 <a href="https://www.codefactor.io/repository/github/slkiser/linespectravibration"><img src="https://www.codefactor.io/repository/github/slkiser/linespectravibration/badge" alt="CodeFactor" /></a> <img alt="GitHub" src="https://img.shields.io/github/license/slkiser/lineSpectraVibration"> <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fslkiser%2FlineSpectraVibration&count_bg=%23FFB031&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/> <a href="https://www.linkedin.com/in/shawn-kiser/"> <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=grey"></a>
 
-This implements the line spectral estimators written in Python used in the submitted manuscript "Real-time sinusoidal parameter estimation for damage growth monitoring during ultrasonic very high cycle fatigue tests". 
+This repository implements the line spectral estimators written in Python used in the submitted manuscript "Real-time sinusoidal parameter estimation for damage growth monitoring during ultrasonic very high cycle fatigue tests".
 
 Abstract:
 > Ultrasonic fatigue tests (UFT) are used to study the fatigue life behavior of metallic components undergoing a very high number of cycles (typically 10^7-10^9 cycles) under relatively low mechanical loads. By soliciting fatigue specimens at 20 kHz, ultrasonic fatigue machines are indispensable for monitoring damage growth and fatigue failures in a reasonable amount of time. As fatigue damage accumulates in the specimen, the specimen's free-end exhibits a nonlinear dynamic response. The resulting quasi-stationary, harmonic signals have sinusoidal parameters (frequency and amplitude) which are slowly time-varying with respect to the excitation frequency. The discrete Fourier transform (DFT) is typically used to extract these evolving sinusoidal parameters from a window of finite data of the vibration signal. Alternative spectral estimation methods, specifically line spectra estimators (LSEs), exploit a priori information of the signal via their modeling basis and overcome limitations seen by the DFT. Many LSEs are known to have state-of-the-art results when benchmarked on purely stationary signals with unit amplitudes. However, their performances are unknown in the context of slowly time-varying signals typical of UFT, leading to a widespread use of the DFT. Thus, this paper benchmarks classical and modern LSEs against specific synthetic signals which arise in UFTs. Adequate algorithms are then recommended and made publicly available to process experimental data coming from ultrasonic fatigue tests depending on performance metrics and experimental restraints.
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 *Make sure to make the main folder the console's working directory.*
 
-[`example.py`](example.py) is a script that generates a random number of **stationary** cissoids `K = 5` with a normalized frequency distance of `d = 2/N`  as a discrete signal length `N = 128` with an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
+[`example.py`](example.py) is a script that generates a random number of **stationary** cissoids `K = 5` with a normalized frequency distance of `d = 2/N`  as a discrete with a signal length `N = 128` and an SNR of `snr = 30`. These parameters are indicated on lines 14-17:
 
 ```
 N = 2**7
@@ -51,11 +51,11 @@ snr = 30
 d = 2/N
 ```
 
-The script utilizes a timer class `TicToc()` which behaves very similarly to MATLAB's `tic` `toc`. For all 6 algorithms, results of time taken, and frequency and their respective amplitude estimates are given. 
+The script utilizes a timer class `TicToc()` which behaves very similarly to MATLAB's `tic` `toc`. For all 6 algorithms, results of time taken, frequency and their respective amplitude estimates are given. 
 
 At the end, a plot is created comparing the discrete Fourier Transform (via FFT), Unitary ESPRIT, and DeepFreq frequency and amplitude estimates. 
 
-The vertical black dotted lines correspond to the true normalized wrapped frequencies and the horizontal line corresponds to the correct amplitude.
+The vertical black dotted lines correspond to the true normalized wrapped frequencies and the horizontal black dotted line corresponds to the correct amplitude.
 
 ![Image of plot](https://github.com/slkiser/lineSpectraVibration/blob/main/plot.png)
 
