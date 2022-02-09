@@ -4,4 +4,4 @@ pytictoc==1.5.2
 scipy==1.6.2
 matplotlib==3.3.4
 numpy==1.20.1
-ipython==7.29.0
+ipython==7.31.1
