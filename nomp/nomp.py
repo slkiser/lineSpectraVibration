@@ -71,17 +71,19 @@ import math
 import random
 
 def nomp(y, P):
-    N = len(y)
     Rc = 3
-    n = np.arange(0, N, 1).reshape(N,1)
-    ncoarse = n*2*np.pi/N
-    nshift = n - (N-1)/2
+    OSR = 2
+    N = len(y)
+    R = N*OSR
+    n = np.arange(0, R, 1).reshape(R,1)
+    ncoarse = n*2*np.pi/R
+    nshift = np.arange(0, N, 1).reshape(N,1) - (N-1)/2
     y_i = np.copy(y).reshape(N,1)
     omegalist = np.zeros((1,1),dtype=float)
     gainlist = np.zeros((1,1),dtype=complex)
     iterc = 0
     while True:
-        gains = (np.fft.fft(y_i.squeeze())/math.sqrt(N)).reshape(N,1)
+        gains = (np.fft.fft(y_i.squeeze(),R)/math.sqrt(N)).reshape(R,1)
         if (nshift[0] != 0):
             gains = gains * np.exp(-1j*ncoarse*nshift[0])
         cost = np.power(np.abs(gains),2)
