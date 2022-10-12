@@ -95,7 +95,7 @@ def nomp(y, P):
         iterc += 1
         if iterc > P:
             break
-        y_i,newomega,newgain = refineone(y_i,newomega,newgain,nshift,N,False)
+        y_i,newomega,newgain = refineone(y_i,newomega,newgain,nshift,N,True)
         if iterc == 1:
             omegalist[0] = newomega
             gainlist[0] = newgain
