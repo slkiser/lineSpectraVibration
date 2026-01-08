@@ -1,7 +1,8 @@
 <div id="top"></div>
 
 # Line spectral estimators for ultrasonic vibration
-<a href="https://www.codefactor.io/repository/github/slkiser/linespectravibration"><img src="https://www.codefactor.io/repository/github/slkiser/linespectravibration/badge" alt="CodeFactor" /></a> <img alt="GitHub" src="https://img.shields.io/github/license/slkiser/lineSpectraVibration"> <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fslkiser%2FlineSpectraVibration&count_bg=%23FFB031&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/> <a href="https://www.linkedin.com/in/shawn-kiser/"> <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=grey"></a>
+<a href="https://www.codefactor.io/repository/github/slkiser/linespectravibration"><img src="https://www.codefactor.io/repository/github/slkiser/linespectravibration/badge" alt="CodeFactor" /></a> <img alt="GitHub" src="https://img.shields.io/github/license/slkiser/lineSpectraVibration"> <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fslkiser%2FlineSpectraVibration&label=Hits&icon=github&color=%23c5b3e6&message=&style=flat&tz=UTC">
+<a href="https://www.linkedin.com/in/shawn-kiser/"> <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=grey"></a>
 
 This repository implements the line spectral estimators written in Python used in the published article <a href="https://www.researchgate.net/publication/362316873_Real-time_sinusoidal_parameter_estimation_for_damage_growth_monitoring_during_ultrasonic_very_high_cycle_fatigue_tests">"Real-time sinusoidal parameter estimation for damage growth monitoring during ultrasonic very high cycle fatigue tests".</a>
 
